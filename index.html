@@ -18,7 +18,7 @@
                     TK 200 or above & get <span class="text-[#E527B2]">20% off</span></h1>
                 <div class="flex justify-center gap-2 items-center mt-4 mb-8">
                     <p class="font-[500]">Use Promo Code</p>
-                    <button class="bg-[#E527B2] text-white px-3 py-1 rounded-lg">SELL200</button>
+                    <button class="bg-[#E527B2] text-white px-3 py-1 rounded-lg" >SELL200</button>
                 </div>
             </div>
             <div class="lg:w-[550px] w-[350px] ">
@@ -32,7 +32,7 @@
                 <h1 class="font-[600] text-2xl mb-5">Kitchenware</h1>
                 <div class="grid  flex-1 gap-2 lg:grid-cols-3 grid-cols-1">
                     <!-- card-1 -->
-                    <div class="card w-70 shadow-xl">
+                    <div onclick="card1()" class="card w-70 shadow-xl">
                         <figure class="px-10 pt-10">
                           <div class="bg-[#1111110D] px-8 py-4">
                             <img src="images/prod1.png"  class="rounded-xl w-[98px]" />
@@ -47,12 +47,12 @@
                                 <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                               </div>
                           <h2 class="card-title">K. Accessories</h2>
-                          <p><span>39.00</span>tk</p>
+                          <p><span id="spoon-tk">39.00</span>tk</p>
                           
                         </div>
                       </div>
                       <!-- card-2 -->
-                    <div class="card w-70 shadow-xl">
+                    <div onclick="card2()" class="card w-70 shadow-xl">
                         <figure class="px-10 pt-10">
                             <div class="bg-[#1111110D] px-8 py-4">
                                 <img src="images/prod2.png"  class="rounded-xl" />
@@ -67,12 +67,12 @@
                                 <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                               </div>
                           <h2 class="card-title">K. Accessories</h2>
-                          <p><span>25.00</span>tk</p>
+                          <p><span id="bowl-tk">25.00</span>tk</p>
                           
                         </div>
                       </div>
                       <!-- card-3 -->
-                    <div class="card w-70 shadow-xl">
+                    <div onclick="card3()" class="card w-70 shadow-xl">
                         <figure class="px-10 pt-10">
                             <div class="bg-[#1111110D] px-8 py-4">
                                 <img src="images/prod3.png"  class="rounded-xl" />
@@ -87,14 +87,14 @@
                                 <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                               </div>
                           <h2 class="card-title">Home Cooker</h2>
-                          <p><span>49.00</span>tk</p>
+                          <p><span id="home-tk">49.00</span>tk</p>
                         </div>
                       </div>
                 </div>
                 <h1 class="font-[600] text-2xl mt-10 mb-5">Sportswear</h1>
                 <div class="grid  flex-1 gap-2 lg:grid-cols-3 grid-cols-1">
                     <!-- card-4 -->
-                    <div class="card w-70 shadow-xl">
+                    <div onclick="card4()" class="card w-70 shadow-xl">
                         <figure class="px-10 pt-10">
                             <div class="bg-[#1111110D] px-8 py-4">
                                 <img src="images/prod4.png"  class="rounded-xl" />
@@ -109,12 +109,12 @@
                                 <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                               </div>
                           <h2 class="card-title">Sports Back Cap</h2>
-                          <p><span>49.00</span>tk</p>
+                          <p><span id="cap">49.00</span>tk</p>
                           
                         </div>
                       </div>
                       <!-- card-5 -->
-                    <div class="card w-70 shadow-xl">
+                    <div onclick="card5()" class="card w-70 shadow-xl">
                         <figure class="px-10 pt-10">
                             <div class="bg-[#1111110D] px-8 py-4 ">
                                 <img src="images/prod5.png"  class="rounded-xl w-[84px]" />
@@ -129,12 +129,12 @@
                                 <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                               </div>
                           <h2 class="card-title">Full Jersey Set</h2>
-                          <p><span>69.00</span>tk</p>
+                          <p><span id="jersey">69.00</span>tk</p>
                           
                         </div>
                       </div>
                       <!-- card-6 -->
-                    <div class="card w-70 shadow-xl">
+                    <div onclick="card6()" class="card w-70 shadow-xl">
                         <figure class="px-10 pt-10">
                             <div class="bg-[#1111110D] px-8 py-4 ">
                                 <img  src="images/prod6.png"  class="rounded-xl w-[100px]" />
@@ -149,7 +149,7 @@
                                 <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                               </div>
                           <h2 class="card-title">Sports cates</h2>
-                          <p><span>159.00</span>tk</p>
+                          <p><span id="cates">159.00</span>tk</p>
                          
                         </div>
                       </div>
@@ -162,8 +162,8 @@
                         <div class="card-body">
                             <p class="font-[500]">Have coupon?</p>
                             <div class="card-actions ">
-                                <input class="border rounded py-1 px-2 lg:w-28" type="text" placeholder="Coupon code">
-                                <button class="bg-[#E527B2] text-white  px-1 py-1 lg:w-12 rounded">Apply</button>
+                                <input id="inp" class="border rounded py-3 px-2 lg:w-28" type="text" placeholder="Coupon code" >
+                                <button  id="co-btn" class=" btn bg-[#E527B2] text-white  px-1  lg:w-16  rounded" disabled >Apply</button>
                             </div>
                         </div>
                     </div>
@@ -175,13 +175,13 @@
     
                             </div>
                             <hr>
-                            <p class="font-[500]">Total Price: <span>00</span>Tk</p>
+                            <p  class="font-[500]">Total Price: <span id="t-price">00</span>Tk</p>
                             <p class="font-[500]">Discount: <span>00</span>TK</p>
                             <p class="font-[500]">Total: <span>00</span>TK</p>
                             <hr>
                         </div>
                         <!-- Open the modal using ID.showModal() method -->
-                        <button class="btn bg-[#E527B2] text-white ml-3 mr-3 "  onclick="my_modal_1.showModal()">open modal</button>
+                        <button class="btn bg-[#E527B2] text-white ml-3 mr-3 "  onclick="my_modal_1.showModal()" >open modal</button>
                         <dialog id="my_modal_1" class="modal">
                             <form method="dialog" class="modal-box">
                                 <div class="grid justify-center">
@@ -193,7 +193,7 @@
                                 </div>
                                 <div class="modal-action justify-center">
                                     <!-- if there is a button in form, it will close the modal -->
-                                    <button class="btn bg-[#E527B2] text-white">Go Home</button>
+                                    <button class="btn bg-[#E527B2] text-white" >Go Home</button>
                                 </div>
                             </form>
                         </dialog>
@@ -202,6 +202,7 @@
             </div>
         </div>
     </main>
+    <script src="index.js"></script>
 </body>
 
 </html>
