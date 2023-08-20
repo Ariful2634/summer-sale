@@ -1,69 +1,83 @@
-function card1(){
-    price = getInput('spoon-tk');
-     tPrice=getInput('t-price');
-     tPrice=price+tPrice;
-    setInput('t-price',tPrice);
-    
-}
-
-function card2(){
-    pri = getInput('bowl-tk');
-    tPri=getInput('t-price');
-    tPri=pri+tPri;
-   setInput('t-price',tPri);
-}
-
-function card3(){
-    homePri = getInput('home-tk');
-    homePrice=getInput('t-price');
-    homePrice=homePri+homePrice;
-   setInput('t-price',homePrice);
-}
-
-function card4(){
-    cap = getInput('cap');
-    capPri=getInput('t-price');
-    capPri=cap+capPri;
-   setInput('t-price',capPri);
-}
-
-function card5(){
-    jersey = getInput('jersey');
-    jerseyPri=getInput('t-price');
-    jerseyPri=jersey+jerseyPri;
-   setInput('t-price',jerseyPri);
-}
-
-function card6(){
-    cates = getInput('cates');
-    catesPri=getInput('t-price');
-    catesPri=cates+catesPri;
-   setInput('t-price',catesPri);
-}
-
-document.getElementById('inp').addEventListener('keyup',function(){
-    input = inp.value;
-    const coupon=document.getElementById('co-btn');
-    if(input=='SELL200'){
-        coupon.removeAttribute('disabled')
+let totalPrice = 0;
+function updatePrice(price) {
+    totalPrice += price;
+    coupon = document.getElementById('co-btn')
+    if (totalPrice >= 200) {
+        coupon.disabled = false;
     }
-    else{
-        coupon.setAttribute('disabled', true)
+    modal=document.getElementById('modal');
+    if(totalPrice>0){
+        modal.disabled=false;
     }
-})
+}
+
+
+
+function card1() {
+    let price = getInput('spoon-tk');
+    updatePrice(price)
+    setInput('t-price', totalPrice);
+
+}
+
+function card2() {
+    let pri = getInput('bowl-tk');
+    updatePrice(pri)
+
+    setInput('t-price', totalPrice);
+}
+
+function card3() {
+    let homePri = getInput('home-tk');
+    updatePrice(homePri)
+
+    setInput('t-price', totalPrice);
+}
+
+function card4() {
+    let cap = getInput('cap');
+    updatePrice(cap)
+
+    setInput('t-price', totalPrice);
+}
+
+function card5() {
+    let jersey = getInput('jersey');
+    updatePrice(jersey)
+
+    setInput('t-price', totalPrice);
+}
+
+function card6() {
+    let cates = getInput('cates');
+    updatePrice(cates)
+
+    setInput('t-price', totalPrice);
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 // reusable function
 
-function getInput(value){
+function getInput(value) {
     const inp = document.getElementById(value);
     const inputString = inp.innerText;
-    const input=parseFloat(inputString);
+    const input = parseFloat(inputString);
     return input;
 }
 
-function setInput(element,price){
-    const set = document.getElementById(element,price);
-    set.innerText=price;
+function setInput(element, price) {
+    const set = document.getElementById(element, price);
+    set.innerText = price;
 }
