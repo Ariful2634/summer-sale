@@ -28,7 +28,7 @@
     </header>
     <main class="max-w-[80%] mx-auto my-16">
         <div class="flex flex-col lg:flex-row gap-4">
-            <div class=" flex-1">
+            <div class=" flex-1 ">
                 <h1 class="font-[600] text-2xl mb-5">Kitchenware</h1>
                 <div class="grid  flex-1 gap-2 lg:grid-cols-3 grid-cols-1">
                     <!-- card-1 -->
@@ -156,7 +156,7 @@
                 </div>
             </div>
             <!-- price -->
-            <div>
+            <div >
                 <div class="bg-[#FFF] mt-16 mb-8">
                     <div class="card w-70  shadow-xl">
                         <div class="card-body">
@@ -176,8 +176,8 @@
                             </div>
                             <hr>
                             <p  class="font-[500]">Total Price: <span id="t-price">00</span>Tk</p>
-                            <p class="font-[500]">Discount: <span>00</span>TK</p>
-                            <p class="font-[500]">Total: <span>00</span>TK</p>
+                            <p class="font-[500]">Discount: <span id="disc">00</span>TK</p>
+                            <p class="font-[500]">Total: <span id="total">00</span>TK</p>
                             <hr>
                         </div>
                         <!-- Open the modal using ID.showModal() method -->
@@ -193,7 +193,7 @@
                                 </div>
                                 <div class="modal-action justify-center">
                                     <!-- if there is a button in form, it will close the modal -->
-                                    <button class="btn bg-[#E527B2] text-white" >Go Home</button>
+                                    <button onclick="back()" class="btn bg-[#E527B2] text-white" >Go Home</button>
                                 </div>
                             </form>
                         </dialog>
